@@ -1,0 +1,49 @@
+/* Scroll-triggered animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animations for project cards */
+.project-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+/* Typewriter effect for hero title */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid var(--primary-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-color); }
+}
+
+/* Magnetic effect for buttons */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
